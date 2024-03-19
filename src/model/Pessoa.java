@@ -23,6 +23,9 @@ public class Pessoa {
 
 	public void setDataNascimento(int dia, int mes, int ano) {
 		this.dataNascimento = LocalDate.of(ano, mes, dia);
+		if (getIdade() > 150) {
+			this.dataNascimento = LocalDate.now();
+		}
 	}
 
 	public String getProfissao() {
